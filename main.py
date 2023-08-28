@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from pymongo import MongoClient
-import uvicorn
 from models import JsonData
 
 app = FastAPI()
@@ -23,6 +22,3 @@ def fetch_data():
         data.append(document)
     return data
         
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
