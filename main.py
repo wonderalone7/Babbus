@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from pymongo import MongoClient
@@ -22,3 +23,5 @@ def fetch_data():
         data.append(document)
     return data
         
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="192.168.5.20", port=8000)
